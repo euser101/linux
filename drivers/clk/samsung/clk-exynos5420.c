@@ -1368,6 +1368,7 @@ static const struct exynos_cpuclk_cfg_data exynos5420_eglclk_d[] __initconst = {
 };
 
 static const struct exynos_cpuclk_cfg_data exynos5800_eglclk_d[] __initconst = {
+	{ 2100000, E5420_EGL_DIV0(3, 7, 7, 4), },
 	{ 2000000, E5420_EGL_DIV0(3, 7, 7, 4), },
 	{ 1900000, E5420_EGL_DIV0(3, 7, 7, 4), },
 	{ 1800000, E5420_EGL_DIV0(3, 7, 7, 4), },
@@ -1394,6 +1395,7 @@ static const struct exynos_cpuclk_cfg_data exynos5800_eglclk_d[] __initconst = {
 		((((kpll) << 24) | ((pclk) << 20) | ((aclk) << 4)))
 
 static const struct exynos_cpuclk_cfg_data exynos5420_kfcclk_d[] __initconst = {
+	{ 1550000, E5420_KFC_DIV(3, 5, 3), },
 	{ 1500000, E5420_KFC_DIV(3, 5, 3), },
 	{ 1400000, E5420_KFC_DIV(3, 5, 3), }, /* for Exynos5800 */
 	{ 1300000, E5420_KFC_DIV(3, 5, 2), },
