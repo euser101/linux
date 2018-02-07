@@ -1264,7 +1264,7 @@ static const struct samsung_gate_clock exynos5x_gate_clks[] __initconst = {
 };
 
 static const struct samsung_pll_rate_table exynos5420_pll2550x_24mhz_tbl[] __initconst = {
-	PLL_35XX_RATE(2000000000, 250, 3, 0),
+	PLL_35XX_RATE(2100000000, 175, 2, 0),
 	PLL_35XX_RATE(1900000000, 475, 6, 0),
 	PLL_35XX_RATE(1800000000, 225, 3, 0),
 	PLL_35XX_RATE(1700000000, 425, 6, 0),
@@ -1368,6 +1368,7 @@ static const struct exynos_cpuclk_cfg_data exynos5420_eglclk_d[] __initconst = {
 };
 
 static const struct exynos_cpuclk_cfg_data exynos5800_eglclk_d[] __initconst = {
+	{ 2100000, E5420_EGL_DIV0(3, 7, 7, 4), },
 	{ 2000000, E5420_EGL_DIV0(3, 7, 7, 4), },
 	{ 1900000, E5420_EGL_DIV0(3, 7, 7, 4), },
 	{ 1800000, E5420_EGL_DIV0(3, 7, 7, 4), },
@@ -1394,6 +1395,7 @@ static const struct exynos_cpuclk_cfg_data exynos5800_eglclk_d[] __initconst = {
 		((((kpll) << 24) | ((pclk) << 20) | ((aclk) << 4)))
 
 static const struct exynos_cpuclk_cfg_data exynos5420_kfcclk_d[] __initconst = {
+	{ 1600000, E5420_KFC_DIV(3, 5, 3), },
 	{ 1500000, E5420_KFC_DIV(3, 5, 3), },
 	{ 1400000, E5420_KFC_DIV(3, 5, 3), }, /* for Exynos5800 */
 	{ 1300000, E5420_KFC_DIV(3, 5, 2), },
